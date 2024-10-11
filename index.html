@@ -163,92 +163,6 @@
             color: #FFF2F2; /* Soft Pink on hover */
         }
         
-        /* Styles for the contact form */
-        .contact-box {
-            display: none; /* Initially hidden */
-            position: absolute; /* Positioning on top */
-            top: 0; /* Align to the top of the content box */
-            left: 0; /* Align to the left of the content box */
-            width: calc(100% - 40px); /* Full width minus padding */
-            height: calc(100% - 40px); /* Full height minus padding */
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-            padding: 20px; /* Adjust padding to keep it within bounds */
-            border-radius: 12px; /* Same border-radius as the original content */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 10; /* Ensure it appears above other content */
-            text-align: center; /* Align text to the left */
-            color: #0C0A34; /* Deep Navy Blue for text */
-        }
-        
-        .contact-box form {
-            display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Left align form elements */
-            font-size: 1em;
-            color: #0C0A34; /* Deep Navy Blue for text */
-            font-family: 'Inter Light', sans-serif;
-        }
-
-        .contact-box label {
-            color: #0C0A34 !important; /* Deep Navy Blue for labels */
-            margin-bottom: 1px;
-        }
-
-        .contact-box input,
-        .contact-box textarea {
-            border: 1px solid #0C0A34; /* Deep Navy Blue border */
-            border-radius: 5px;
-            padding: 1px;
-            margin-bottom: 1px; /* Space between fields */
-            width: 90%; /* Full width */
-            box-sizing: border-box; /* Include padding in width */
-            color: #0C0A34; /* Deep Navy Blue for text inside inputs */
-            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for better visibility */
-        }
-
-        .submit-btn {
-            background-color: #FF6584; /* Muted Pink */
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            font-family: 'Inter Light', sans-serif;
-            display: inline-block; /* Change to inline-block for side-by-side */
-            margin: 0 10px; /* Space between buttons */
-        }
-
-        .submit-btn:hover {
-            background-color: #FF97AC; /* Slightly lighter than Muted Pink on hover */
-        }
-
-         .close2-btn {
-            background-color: #FFF; /* White */
-            color: white;
-            border: 1.5px solid #FF6584; /* Muted Pink */
-            border-color: #FF6584; /* Muted Pink */
-            padding: 10px;
-            color: #FF6584; /* Muted Pink */
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            font-family: 'Inter Light', sans-serif;
-            display: inline-block; /* Change to inline-block for side-by-side */
-            margin: 0 10px; /* Space between buttons */
-        }
-        
-        .close2-btn:hover {
-            background-color: #FFF; /* still White on hover */
-            border: 1.5px solid #FF97AC; /* Slightly lighter than Muted Pink on hover */
-            color: #FF97AC; /* Slightly lighter than Muted Pink on hover */
-        }
-
-        .button-container {
-            display: flex; /* Flexbox for horizontal alignment */
-            justify-content: center; /* Center the buttons */
-            margin-top: 5px; /* Space above buttons */
-        }
     </style>
 </head>
 <body>
@@ -261,10 +175,10 @@
             <p>Department of Biological Sciences</p>
             <p>Vanderbilt University</p>
 
+
             <!-- Collapsible Info Box Buttons -->
             <button class="aboutme" onclick="toggleInfoBox()">ABOUT ME</button>
-            <button class="contact" onclick="toggleContactBox()">CONTACT</button>
-
+            
             <!-- About Me Info Box -->
             <div id="infoBox" class="info-box">
                 <h2>ABOUT ME</h2>
@@ -272,7 +186,8 @@
                 <button class="close-btn" onclick="toggleInfoBox()">Close</button>
             </div>
 
-            <a href="jade.m.mcdaniel@vanderbilt.edu" class="contact">CONTACT</a>
+            <!-- Email contact button -->
+            <a href="mailto: jade.m.mcdaniel@vanderbilt.edu" class="contact">CONTACT</a>
             
             <!-- Social Media Links with Icons -->
             <div class="social-media">
