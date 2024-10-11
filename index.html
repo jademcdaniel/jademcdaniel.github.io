@@ -81,8 +81,8 @@
             color: #FF6584; /* Muted Pink on hover */
         }
 
-        /* Collapsible styles */
-        .collapsible {
+        /* About Me styles */
+        .aboutme {
             background-color: #0C0A34; /* Deep Navy Blue */
             color: white;
             cursor: pointer;
@@ -98,7 +98,7 @@
             margin-top: 20px; /* Adds some space above the button */
         }
 
-        .collapsible:hover {
+        .aboutme:hover {
             background-color: #FFF2F2; /* Soft Pink on hover */
         }
 
@@ -140,7 +140,28 @@
         .close-btn:hover {
             background-color: #FF97AC; /* Slightly lighter than Soft Pink on hover */
         }
+        
+        /* Contact styles */
+        .contact {
+            background-color: #3A79FF; /* Soft Blue */
+            cursor: pointer;
+            padding: 10px;
+            border: 2.0px solid #0C0A34; /* Deep Navy Blue */
+            border-radius: 5px;
+            text-align: center;
+            outline: none;
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.2em;
+            color: #0C0A34; /* Deep Navy Blue for text */
+            transition: background-color 0.3s ease;
+            margin-top: 20px; /* Adds some space above the button */
+        }
 
+        .contact:hover {
+            border: 2.0px solid #1E1A4D; /* Slightly lighter than Deep Navy Blue */
+            color: #1E1A4D; /* Slightly lighter than Deep Navy Blue */
+        }
+        
         /* Styles for the contact form */
         .contact-box {
             display: none; /* Initially hidden */
@@ -225,7 +246,7 @@
         .button-container {
             display: flex; /* Flexbox for horizontal alignment */
             justify-content: center; /* Center the buttons */
-            margin-top: 10px; /* Space above buttons */
+            margin-top: 5px; /* Space above buttons */
         }
     </style>
 </head>
@@ -240,8 +261,8 @@
             <p>Vanderbilt University</p>
 
             <!-- Collapsible Info Box Buttons -->
-            <button class="collapsible" onclick="toggleInfoBox()">ABOUT ME</button>
-            <button class="collapsible" onclick="toggleContactBox()">CONTACT</button>
+            <button class="aboutme" onclick="toggleInfoBox()">ABOUT ME</button>
+            <button class="contact" onclick="toggleContactBox()">CONTACT</button>
 
             <!-- About Me Info Box -->
             <div id="infoBox" class="info-box">
