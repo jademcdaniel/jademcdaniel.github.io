@@ -41,6 +41,7 @@
             border-radius: 12px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             position: relative; /* Position relative for absolute positioning of the new box */
+            z-index: 1; /* Ensure it is behind the info box */
         }
 
         h1 {
@@ -102,14 +103,16 @@
         .info-box {
             display: none; /* Initially hidden */
             position: absolute; /* Positioning on top */
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Centering adjustment */
+            top: 0; /* Align to the top of the content box */
+            left: 0; /* Align to the left of the content box */
+            width: 100%; /* Full width of the content box */
+            height: 100%; /* Full height of the content box */
             background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-            padding: 20px;
-            border-radius: 12px;
+            padding: 40px; /* Same padding as the original content */
+            border-radius: 12px; /* Same border-radius as the original content */
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 10; /* Ensure it appears above other content */
+            text-align: left; /* Align text to the left */
         }
 
         .info-box p {
@@ -124,7 +127,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
-            margin-top: 10px;
+            margin-bottom: 20px; /* Space below the close button */
         }
     </style>
 </head>
