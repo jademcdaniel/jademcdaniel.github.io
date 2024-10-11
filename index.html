@@ -149,7 +149,7 @@
         .contact-box form {
             display: flex;
             flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Center align form elements */
+            align-items: left; /* Left align form elements */
             font-size: 1em;
             font-family: 'Antonio', sans-serif;
         }
@@ -159,14 +159,16 @@
             margin-bottom: 5px;
         }
 
-        .contact-box input, .contact-box textarea {
+        .contact-box input,
+        .contact-box textarea {
             border: 1px solid #0C0A34; /* Deep Navy Blue border */
             border-radius: 5px;
             padding: 8px;
             margin-bottom: 10px; /* Space between fields */
-            width: 100%; /* 90% width */
+            width: 100%; /* Full width */
             box-sizing: border-box; /* Include padding in width */
-            color: #0C0A34; /* Deep Navy Blue */
+            color: #0C0A34; /* Deep Navy Blue for text inside inputs */
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for better visibility */
         }
 
         .submit-btn {
@@ -186,7 +188,7 @@
             background-color: #FF97AC; /* Slightly lighter than Muted Pink on hover */
         }
 
-          .close2-btn {
+         .close2-btn {
             background-color: #FFF; /* White */
             color: white;
             border: 1.5px solid #FF6584; /* Muted Pink */
