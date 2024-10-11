@@ -183,7 +183,25 @@
         }
 
         .submit-btn:hover {
-            background-color: #FF97AC; /* Slightly lighter than Soft Pink on hover */
+            background-color: #FF97AC; /* Slightly lighter than Muted Pink on hover */
+        }
+
+          .close2-btn {
+            background-color: #FFF2F2; /* Soft Pink */
+            color: white;
+            border: 1px;
+            border-color: #FF6584; /* Muted Pink */
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-family: 'Inter Light', sans-serif;
+            display: inline-block; /* Change to inline-block for side-by-side */
+            margin: 0 10px; /* Space between buttons */
+        }
+        
+        .close2-btn:hover {
+            background-color: #FF97AC; /* Slightly lighter than Muted Pink on hover */
         }
 
         .button-container {
@@ -230,7 +248,7 @@
                     <!-- Button Container for Submit and Close -->
                     <div class="button-container">
                         <button type="submit" class="submit-btn">Submit</button>
-                        <button type="button" class="close-btn" onclick="toggleContactBox()">Close</button>
+                        <button type="button" class="close2-btn" onclick="toggleContactBox()">Close</button>
                     </div>
                 </form>
             </div>
