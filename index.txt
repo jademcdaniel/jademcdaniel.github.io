@@ -8,6 +8,9 @@
 
     <!-- Google Font: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
         body {
@@ -53,6 +56,21 @@
             margin: 5px 0;
         }
 
+        .social-media {
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #FFF2F2;
+            font-size: 1.5em;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #7286D3;
+        }
     </style>
 </head>
 <body>
@@ -64,9 +82,21 @@
             <p>PhD Candidate, Allison Walker Lab</p>
             <p>Department of Biological Sciences</p>
             <p>Vanderbilt University</p>
+
+            <!-- Social Media Links with Icons -->
+            <div class="social-media">
+                <a href="https://lab.vanderbilt.edu/walker-lab/" target="_blank"><i class="fas fa-globe"></i></a>
+                <a href="https://www.linkedin.com/in/jademcdaniel/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/jademmcdaniel" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://orcid.org/0000-0002-0664-8268" target="_blank"><i class="fab fa-orcid"></i></a>
+                <a href="https://researchgate.net/profile/0000-0002-0664-8268" target="_blank"><i class="fab fa-researchgate"></i></a>
+                <a href="https://github.com/jademcdaniel" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </div>
     </div>
 
+    <!-- Font Awesome Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
 </body>
 </html>
-
