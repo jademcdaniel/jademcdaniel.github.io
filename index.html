@@ -40,6 +40,7 @@
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative; /* Position relative for absolute positioning of the new box */
         }
 
         h1 {
@@ -97,12 +98,33 @@
             background-color: #1E1B3D; /* Darker shade on hover */
         }
 
-        .content-box {
-            padding: 10px;
+        /* New Info Box */
+        .info-box {
             display: none; /* Initially hidden */
-            overflow: hidden;
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-            color: #FFF; /* Text color */
+            position: absolute; /* Positioning on top */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Centering adjustment */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10; /* Ensure it appears above other content */
+        }
+
+        .info-box p {
+            color: #0C0A34; /* Deep Navy Blue for text */
+        }
+
+        .close-btn {
+            background-color: #FF6584; /* Muted Pink */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -116,9 +138,10 @@
             <p>Department of Biological Sciences</p>
             <p>Vanderbilt University</p>
 
-            <!-- Collapsible Info Box -->
+            <!-- Collapsible Info Box Button -->
             <button class="collapsible">About Me</button>
-            <div class="content-box">
+            <div class="info-box">
+                <button class="close-btn">Close</button>
                 <p>My research interests at Vanderbilt University encompass molecular endocrinology, drug discovery, and protein design. I specialize in investigating these research areas using both computational methods and modern experimental techniques. My thesis project in the Walker lab involves a three-fold approach to antibody mimetic design: molecular modeling, directed evolution, and machine-learning. The goal of this research is to establish faster and more efficient workflows for targeting sites relevant to metabolic disease, beginning with the human glucagon receptor.</p>
             </div>
 
@@ -140,15 +163,15 @@
     <script>
         // JavaScript for collapsible info box
         const collapsible = document.querySelector(".collapsible");
-        const contentBox = document.querySelector(".content-box");
+        const infoBox = document.querySelector(".info-box");
+        const closeBtn = document.querySelector(".close-btn");
 
         collapsible.addEventListener("click", function() {
-            this.classList.toggle("active");
-            if (contentBox.style.display === "block") {
-                contentBox.style.display = "none";
-            } else {
-                contentBox.style.display = "block";
-            }
+            infoBox.style.display = "block"; // Show the info box
+        });
+
+        closeBtn.addEventListener("click", function() {
+            infoBox.style.display = "none"; // Hide the info box
         });
     </script>
 
