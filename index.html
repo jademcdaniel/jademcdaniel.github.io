@@ -78,6 +78,32 @@
         .social-media a:hover {
             color: #FF6584; /* Muted Pink on hover */
         }
+
+        /* Collapsible styles */
+        .collapsible {
+            background-color: #0C0A34; /* Deep Navy Blue */
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            margin-top: 20px; /* Adds some space above the button */
+        }
+
+        .collapsible:hover {
+            background-color: #1E1B3D; /* Darker shade on hover */
+        }
+
+        .content-box {
+            padding: 10px;
+            display: none; /* Initially hidden */
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            color: #FFF; /* Text color */
+        }
     </style>
 </head>
 <body>
@@ -89,6 +115,12 @@
             <p>PhD Candidate, Allison Walker Lab</p>
             <p>Department of Biological Sciences</p>
             <p>Vanderbilt University</p>
+
+            <!-- Collapsible Info Box -->
+            <button class="collapsible">About Me</button>
+            <div class="content-box">
+                <p>text here</p>
+            </div>
 
             <!-- Social Media Links with Icons -->
             <div class="social-media">
@@ -104,6 +136,21 @@
 
     <!-- Font Awesome Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <script>
+        // JavaScript for collapsible info box
+        const collapsible = document.querySelector(".collapsible");
+        const contentBox = document.querySelector(".content-box");
+
+        collapsible.addEventListener("click", function() {
+            this.classList.toggle("active");
+            if (contentBox.style.display === "block") {
+                contentBox.style.display = "none";
+            } else {
+                contentBox.style.display = "block";
+            }
+        });
+    </script>
 
 </body>
 </html>
