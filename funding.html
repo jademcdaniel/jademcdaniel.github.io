@@ -1,1 +1,241 @@
-Test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jade McDaniel - PhD Candidate in Biological Sciences">
+    <title>Meeting Specific Funding</title>
+
+    <!-- Google Font: Inter Tight -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+
+    <!-- Google Font: Antonio -->
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter Tight', sans-serif;
+            background: url('https://jademcdaniel.github.io/3d-abstract-background-with-colourful-low-poly-plexus-design.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #FFF;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(12, 10, 52, 0.5); /* Semi-transparent overlay */
+        }
+
+        .content {
+            background-color: rgba(58, 121, 255, 0.9); /* Soft Blue with transparency */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative; /* Position relative for absolute positioning of the new box */
+            z-index: 1; /* Ensure it is behind the info box */
+        }
+
+        h1 {
+            color: #0C0A34; /* Deep Navy Blue */
+            font-size: 2.5em;
+            margin-bottom: 0px;
+            font-family: 'Antonio', sans-serif; /* Adding Antonio for h1 */
+        }
+
+        h2 {
+            color: #0C0A34; /* Deep Navy Blue */
+            font-size: 1.5em;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-family: 'Antonio', sans-serif; /* Adding Antonio for h2 */
+        }
+
+        p {
+            color: #FFF2F2; /* Soft Pink */
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        .social-media {
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #FFF2F2; /* Soft Pink */
+            font-size: 1.5em;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #FF6584; /* Muted Pink on hover */
+        }
+
+        /* About Me styles */
+        .aboutme {
+            background-color: #0C0A34; /* Deep Navy Blue */
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border: 2.0px solid #0C0A34; /* Deep Navy Blue */
+            border-radius: 5px;
+            text-align: center;
+            outline: none;
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.2em;
+            color: #3A79FF; /* Soft Blue */
+            transition: background-color 0.3s ease;
+            margin-top: 20px; /* Adds some space above the button */
+        }
+
+        .aboutme:hover {
+            background-color: #FFF2F2; /* Soft Pink on hover */
+            border: 2.0px solid #FFF2F2; /* Soft Pink on hover */
+        }
+
+        /* New Info Box */
+        .info-box {
+            display: none; /* Initially hidden */
+            position: absolute; /* Positioning on top */
+            top: 0; /* Align to the top of the content box */
+            left: 0; /* Align to the left of the content box */
+            width: calc(100% - 40px); /* Full width minus padding */
+            height: calc(100% - 40px); /* Full height minus padding */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 20px; /* Adjust padding to keep it within bounds */
+            border-radius: 12px; /* Same border-radius as the original content */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10; /* Ensure it appears above other content */
+            text-align: center; /* Align text to the left */
+        }
+
+        .info-box p {
+            color: #0C0A34; /* Deep Navy Blue for text */
+            font-size: 1.0em; /* Smaller text size */
+            margin-bottom: 20px; /* Space below the text */
+        }
+
+        .close-btn {
+            background-color: #FF6584; /* Muted Pink */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-family: 'Inter Light', sans-serif;
+            display: inline-block; /* Change to inline-block for side-by-side */
+            margin: 0 10px; /* Space between buttons */
+        }
+        
+        .close-btn:hover {
+            background-color: #FF97AC; /* Slightly lighter than Soft Pink on hover */
+        }
+        
+        /* Contact styles */
+        .contact {
+            background-color: #3A79FF; /* Soft Blue */
+            cursor: pointer;
+            padding: 10px;
+            border: 2.0px solid #0C0A34; /* Deep Navy Blue */
+            border-radius: 5px;
+            text-align: center;
+            outline: none;
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.2em;
+            color: #0C0A34; /* Deep Navy Blue for text */
+            transition: background-color 0.3s ease;
+            margin-top: 20px; /* Adds some space above the button */
+        }
+
+        .contact:hover {
+            border: 2.0px solid #FFF2F2; /* Soft Pink on hover */
+            color: #FFF2F2; /* Soft Pink on hover */
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>Funding Acknowledgement</h1>
+            <h2><i>[Meeting name and date]</i></h2>
+            <p><b>Funding for [this meeting] was generously provided by the following source(s):</b></p>
+            <p>[Funding source 1]</p>
+            <p>[Funding source 2]</p>
+            <p>[Funding source 3]</p>
+
+
+            <!-- Collapsible Info Box Buttons -->
+            <button class="aboutme" onclick="toggleInfoBox()">ABOUT ME</button>
+            
+            <!-- About Me Info Box -->
+            <div id="infoBox" class="info-box">
+                <h2>ABOUT ME</h2>
+                <p>My research interests at Vanderbilt University encompass molecular endocrinology, drug discovery, and protein design. I specialize in investigating these research areas using both computational methods and modern experimental techniques. My thesis project in the Walker lab involves a three-fold approach to antibody mimetic design: molecular modeling, directed evolution, and machine-learning. The goal of this research is to establish faster and more efficient workflows for targeting sites relevant to metabolic disease, beginning with the human glucagon receptor.</p>
+                <button class="close-btn" onclick="toggleInfoBox()">Close</button>
+            </div>
+
+            <!-- Email contact button -->
+            <button class="contact" onclick="window.location.href='mailto:jade.m.mcdaniel@vanderbilt.edu';">CONTACT</button>
+            
+            <!-- Social Media Links with Icons -->
+            <div class="social-media">
+                <a href="https://lab.vanderbilt.edu/walker-lab/" target="_blank"><i class="fas fa-globe"></i></a>
+                <a href="https://www.linkedin.com/in/jademcdaniel/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/jademmcdaniel" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://orcid.org/0000-0002-0664-8268" target="_blank"><i class="fab fa-orcid"></i></a>
+                <a href="https://researchgate.net/profile/Jade-Mcdaniel" target="_blank"><i class="fab fa-researchgate"></i></a>
+                <a href="https://github.com/jademcdaniel" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <script>
+        // JavaScript for collapsible info boxes
+        const infoBox = document.getElementById("infoBox");
+        const contactBox = document.getElementById("contactBox");
+
+        function toggleInfoBox() {
+            if (infoBox.style.display === "block") {
+                infoBox.style.display = "none";
+            } else {
+                infoBox.style.display = "block";
+                contactBox.style.display = "none"; // Hide contact box if showing info box
+            }
+        }
+
+        function toggleContactBox() {
+            if (contactBox.style.display === "block") {
+                contactBox.style.display = "none";
+            } else {
+                contactBox.style.display = "block";
+                infoBox.style.display = "none"; // Hide info box if showing contact box
+            }
+        }
+
+        // Handle form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            alert("Thank you for your message!"); // Show a thank you message
+            document.getElementById("contactForm").reset(); // Reset the form
+            contactBox.style.display = "none"; // Hide the contact box after submission
+        });
+    </script>
+
+</body>
+</html>
